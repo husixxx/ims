@@ -1,0 +1,25 @@
+1. Jak funguje kontrola balíků u skutečných dopravců?
+U reálných dopravců kontrola balíků probíhá v několika krocích:
+
+Příjem balíku: Balíky mohou být přijaty různými způsoby: osobní doručení, zboží od dodavatele, online objednávky apod.
+Automatické třídění: Po přijetí balíku probíhá automatické skenování a třídění podle velikosti, typu, a destinace.
+Ruční kontrola: Některé balíky procházejí ruční kontrolou, zejména u speciálních nebo cenných zásilek. Tento proces zahrnuje pohled pracovníka, který se ujistí, že všechny náležitosti jsou v pořádku (např. poškození, správnost dokumentů).
+
+2. Jak funguje rozvoz u skutečných dopravců?
+U reálných dopravců probíhá rozvoz balíků většinou na základě:
+
+Plánování tras: Reálné společnosti používají algoritmy pro optimalizaci tras, což znamená, že balíky jsou rozděleny do zón a jsou přidělovány vozidlům.
+Dynamické přizpůsobení tras: V reálném světě se trasy mohou měnit v závislosti na dopravní situaci (dopravní zácpy, nehody), což ovlivňuje dobu doručení.
+Různé typy vozidel: Dopravci používají různé typy vozidel pro městské a venkovské oblasti, a často mají kapacitu pro určité množství balíků.
+
+3. Implementace v SIMLIB
+Pojďme to zjednodušit do kódu, který odpovídá těmto reálným procesům. Použijeme:
+
+Store pro řízení pracovníka (pokud je to ruční kontrola).
+Facility pro řízení kapacity vozidel.
+Queue pro čekající balíky, které čekají na dostupnost vozidla.
+Krok za krokem implementace:
+Generování balíků: Balíky jsou generovány v pravidelných intervalech.
+Kontrola balíků: Kontrola je buď automatizovaná, nebo ruční (pracovník čeká na volnou kapacitu).
+Nakládka balíků: Balíky se nakládají do vozidel. Použijeme facility k simulaci vozidel, která čekají na balíky.
+Rozvoz balíků: Po nakládce vozidlo vyrazí na trasu, která je náhodně ovlivněna dopravními zácpami (pomocí náhodného zpoždění).
