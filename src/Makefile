@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=gnu++11 -Wall -Wextra -pedantic
 LDFLAGS = -lsimlib -lm
-SRCS = main.cpp Vehicle.cpp PackageGenerator.cpp ControllerWorker.cpp LoaderWorker.cpp Package.cpp
+SRCS = main.cpp Vehicle.cpp PackageGenerator.cpp LoaderWorker.cpp Package.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 ims.out: $(OBJS)
