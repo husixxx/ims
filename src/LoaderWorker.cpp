@@ -14,7 +14,7 @@ void LoaderWorker::Behavior()
         std::cout << "Skladník připravuje balík " << p->id << " k nakládce.\n";
 
         Vehicle *vehicle = nullptr;
-        // Kontrola dostupnosti e-auta
+        
         if (Random() < 0.5 && !eVehicleQueue.Empty())
         {
             vehicle = (Vehicle *)eVehicleQueue.GetFirst();
@@ -34,11 +34,11 @@ void LoaderWorker::Behavior()
         // Pokud žádné vozidlo není k dispozici
         vehicle->LoadPackage(p);
 
-        Wait(Exponential(4)); // Simulace nakládky balíku (1 minuta)
+        Wait(Exponential(4)); 
 
         if (vehicle->currentLoad < vehicle->maxCapacity)
         {
-            vehicle->Into(vehicle->vehicleType == VehicleType::ELECTRIC ? eVehicleQueue : vehicleQueue); // Vozidlo je plně naloženo, začne doručení
+            vehicle->Into(vehicle->vehicleType == VehicleType::ELECTRIC ? eVehicleQueue : vehicleQueue); // Zpet do fronty
         }
     }
 }
