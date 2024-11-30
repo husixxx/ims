@@ -9,7 +9,7 @@ Queue checkQueue;                             // Fronta pro balíky čekající 
 Queue vehicleQueue;                           // Fronta pro vozidla čekající na nakládku
 
 int main() {
-    Init(0, 10000);  // Inicializace SIMLIB
+    Init(0, 100);  // Inicializace SIMLIB
 
     // Vytvoření generátoru balíků
     PackageGenerator* generator = new PackageGenerator();
@@ -21,7 +21,11 @@ int main() {
     controller->Activate();
     // // Vytvoření vozidel
     Vehicle* vehicle1 = new Vehicle(20);  // Vozidlo s kapacitou 20 balíků
+    Vehicle* vehicle2 = new Vehicle(20);  // Vozidlo s kapacitou 20 balíků
     (vehicle1->Into(vehicleQueue));  // Přidání vozidla do fronty vozidel
+    (vehicle2->Into(vehicleQueue));  // Přidání vozidla do fronty vozidel
+    vehicle1->Activate();  // Aktivace vozidla
+    vehicle2->Activate();  // Aktivace vozidla
 
     // // Vytvoření pracovníků pro kontrolu
 

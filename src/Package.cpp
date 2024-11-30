@@ -15,4 +15,5 @@ void Package::Behavior()
     std::cout << "Balík " << id << " zkontrolovan, čeká na nakládku." << std::endl;
     Into(loadQueue);
     Passivate();
+    // Passivate();
 }

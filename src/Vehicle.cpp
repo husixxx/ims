@@ -23,6 +23,7 @@ void Vehicle::Behavior() {
 
         // Po doručení balíků se vozidlo vrací a připraví se na další nakládku
         currentLoad = 0;  // Resetování kapacity vozidla
+        Into(vehicleQueue);  // Vozidlo se vrací do fronty vozidel
     }
 }
 
