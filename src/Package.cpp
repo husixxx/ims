@@ -1,8 +1,7 @@
 #include "Package.h"
 // Třída pro balíky
 
-Package::Package(std::string _id, std::string _size, std::string _priority)
-    : id(_id), size(_size), priority(_priority) {}
+
 
 void Package::Behavior()
 {

@@ -1,4 +1,16 @@
-all:
-	g++ -std=gnu++11 -Wall -Wextra -pedantic main.cpp -o ims.out -lsimlib -lm
+CXX = g++
+CXXFLAGS = -std=gnu++11 -Wall -Wextra -pedantic
+LDFLAGS = -lsimlib -lm
+SRCS = main.cpp Vehicle.cpp PackageGenerator.cpp ControllerWorker.cpp LoaderWorker.cpp Package.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+ims.out: $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
 clean:
-	rm -f ims
+	rm -f $(OBJS) ims.out
+all:
+	clean ims.out

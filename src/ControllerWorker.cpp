@@ -3,7 +3,7 @@
 void ControllerWorker::Behavior()
 {
     while (true)
-    {
+    {   
         if (!checkQueue.Empty())
         {
             Package *p = (Package *)checkQueue.GetFirst();
@@ -11,6 +11,8 @@ void ControllerWorker::Behavior()
             Wait(Exponential(3));
             std::cout << "Pracovník zpracoval balík " << p->id << std::endl;
             p->Activate();
+        }else{
+            Wait(1);
         }
     }
 }
