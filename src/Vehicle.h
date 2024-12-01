@@ -24,14 +24,16 @@ public:
     double speed;                        // Rychlost vozidla (km/h)
     double distanceToDelivery;           // Vzdálenost k doručení
     double distanceToReturn;             // Vzdálenost zpět (do depa)
+    double fuelRemaining;
+    double fuelCapacity;
 
     std::vector<Package*> packages;      // Seznam balíků, které vozidlo vezme
 
     // Konstruktor
     Vehicle(std::string id, VehicleType type, double fuelConsumption, double batteryCapacity, 
-            double maxCapacity, double speed)
+            double maxCapacity, double speed, double fuelCapacity)
         : id(id), vehicleType(type), fuelConsumption(fuelConsumption), batteryCapacity(batteryCapacity),
-          batteryRemaining(batteryCapacity), maxCapacity(maxCapacity), speed(speed), currentLoad(0) {}
+          batteryRemaining(batteryCapacity), maxCapacity(maxCapacity), speed(speed),fuelRemaining(fuelCapacity) , currentLoad(0), fuelCapacity(fuelCapacity) {}
 
     // Chování vozidla (Behavior method)
     void Behavior() override;

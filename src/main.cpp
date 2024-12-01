@@ -19,9 +19,9 @@ int main()
     PackageGenerator *generator = new PackageGenerator();
     generator->Activate(); // Aktivace generátoru balíků
 
-    Vehicle *vehicle1 = new Vehicle("1", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0); // Vozidlo s kapacitou 20 balíků
-    Vehicle *vehicle2 = new Vehicle("2", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0); // Vozidlo s kapacitou 20 balíků
-    Vehicle *vehicle3 = new Vehicle("3", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0); // Vozidlo s kapacitou 20 balíků
+    Vehicle *vehicle1 = new Vehicle("1", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0, 55.0); // Vozidlo s kapacitou 20 balíků
+    Vehicle *vehicle2 = new Vehicle("2", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0, 55.0); // Vozidlo s kapacitou 20 balíků
+    Vehicle *vehicle3 = new Vehicle("3", VehicleType::COMBUSTION, 8.0, 300.0, 20.0, 40.0, 55.0); // Vozidlo s kapacitou 20 balíků
 
     vehicle1->Activate();           // Aktivace vozidla
     vehicle2->Activate();           // Aktivace vozidla
