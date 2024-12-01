@@ -4,14 +4,15 @@
 #include <string>
 #include "globals.h"
 
-class Package : public Process {
+class Package : public Process
+{
 public:
     std::string id;
-    std::string size;  // Malý, Střední, Velký
+    std::string size; // Malý, Střední, Velký
     double distance;
-    Package(std::string _id, std::string _size, std::string _destination, double _distance)
+    Package(std::string _id, std::string _size, double _distance)
         : id(_id), size(_size), distance(_distance) {};
-    void Behavior() override;  // Metoda pro chování balíku (čekání na nakládku)
+    void Behavior() override; // Metoda pro chování balíku (čekání na nakládku)
 };
 
-#endif  // PACKAGE_H
+#endif // PACKAGE_H
