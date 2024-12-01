@@ -1,7 +1,7 @@
-1. Refill moze vlastne nastat aj pocas rozvazania v meste su pripojky
-2. Velky balik zabere 2 mista
-3. Treba aj natankovat auto
-4. Pridat spotrebu kw/h
-5. Average doba doruceni
-6. Průměrná spotřeba na doručení balíku:
-7. Průměrný / Celkovy čas na tankování/nabíjení:
+1. Refill moze vlastne nastat aj pocas rozvazania v meste su pripojky --- hotovo
+2. Velky balik zabere 2 mista -- hotovo
+3. Treba aj natankovat auto -- hjotovo
+4. Pridat spotrebu kw/h x 
+5. Average doba doruceni x
+6. Průměrná spotřeba na doručení balíku: x
+7. Průměrný / Celkovy čas na tankování/nabíjení: x
