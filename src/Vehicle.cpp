@@ -51,11 +51,13 @@ void Vehicle::Behavior()
 
             Wait(package->distance / speed * 60.0); // Čas doručení balíku na základě vzdálenosti
 
+
             std::cout << "Balík " << package->id << " doručen.\n";
             
             stats.totalPackagesDelivered++;
             stats.totalDistanceTravelled += package->distance;
             distanceToReturn = package->distance; // Nastavení vzdálenosti zpět (do depa)
+            package->Activate();                  // Aktivace balíku
         }
 
         packages.clear();
@@ -117,7 +119,13 @@ bool Vehicle::CanDeliver(double distance)
 
 void Vehicle::LoadPackage(Package *p)
 {
-    currentLoad++;
+    
+    if(p->size == "Velký")
+    {
+        currentLoad += 2;
+    }else{
+        currentLoad++;
+    }
     if (currentLoad > maxCapacity)
     {
         std::cerr << "Překročena kapacita vozidla " << id << "!\n";

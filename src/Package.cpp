@@ -1,7 +1,4 @@
 #include "Package.h"
-// Třída pro balíky
-
-
 
 void Package::Behavior()
 {
@@ -15,5 +12,7 @@ void Package::Behavior()
     std::cout << "Balík " << id << " zkontrolovan, čeká na nakládku." << std::endl; 
     Into(loadQueue);
     Passivate();
+    
+    Terminate();
     // Passivate();
 }
